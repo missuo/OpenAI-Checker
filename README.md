@@ -2,7 +2,7 @@
 Used to check if your IP can access OpenAI services.
 
 ## Detection method
-Our detection results are completely different from Cloudflare's regional judgment of your IP, and the accuracy is irrelevant to this script.
+Our detection results are distinct from **Cloudflare** and the accuracy is independent of this script.
 
 ## Usage
 ```shell
