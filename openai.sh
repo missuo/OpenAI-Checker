@@ -10,7 +10,7 @@ echo "OpenAI Access Checker v0.0.1"
 echo 
 if [[ $(curl -sS https://chat.openai.com/ -I | grep "text/plain") != "" ]]
 then
-	echo "IP is Block"
+	echo "Your IP is BLOCKED!"
 else
 	iso2_code=$(curl -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
 	if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code}" ]]; 
