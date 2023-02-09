@@ -1,4 +1,14 @@
 #!/bin/bash
+###
+ # @Author: Vincent Young
+ # @Date: 2023-02-09 17:39:59
+ # @LastEditors: Vincent Young
+ # @LastEditTime: 2023-02-09 17:42:48
+ # @FilePath: /OpenAI-Checker/openai.sh
+ # @Telegram: https://t.me/missuo
+ # 
+ # Copyright © 2023 by Vincent, All Rights Reserved. 
+### 
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -12,23 +22,32 @@ if [[ $(curl -sS https://chat.openai.com/ -I | grep "text/plain") != "" ]]
 then
 	echo "Your IP is BLOCKED!"
 else
-	iso2_code4=$(curl -4 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
-# 	iso2_code6=$(curl -6 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
 	echo -e "[IPv4]"
-	if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code4}" ]]; 
-	then
-		echo -e "${GREEN}Your IP supports access to OpenAI.${PLAIN} Region: ${iso2_code4}" 
+	check4=`ping 1.1.1.1 -c 1 2>&1`;
+	if [[ "$check4" != *"received"* ]] && [[ "$check4" != *"transmitted"* ]];then
+		echo -e "\033[34mIPv4 is not supported on the current host. Skip...\033[0m";
 	else
-		echo -e "Region: ${iso2_code4}. ${RED}Not support OpenAI at this time.${PLAIN}"
+		iso2_code4=$(curl -4 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
+		if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code4}" ]]; 
+		then
+			echo -e "${GREEN}Your IP supports access to OpenAI.${PLAIN} Region: ${iso2_code4}" 
+		else
+			echo -e "Region: ${iso2_code4}. ${RED}Not support OpenAI at this time.${PLAIN}"
+		fi
 	fi
-# 	echo -e "[IPv6]"
-# 	if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code6}" ]]; 
-# 	then
-# 		echo -e "${GREEN}Your IP supports access to OpenAI.${PLAIN} Region: ${iso2_code6}" 
-# 	else
-# 		echo -e "Region: ${iso2_code6}. ${RED}Not support OpenAI at this time.${PLAIN}"
-# 	fi
-	
+	echo -e "[IPv6]"
+	check6=`ping6 240c::6666 -c 1 2>&1`;
+	if [[ "$check6" != *"received"* ]] && [[ "$check6" != *"transmitted"* ]];then
+		echo -e "\033[34mIPv6 is not supported on the current host. Skip...\033[0m";    
+	else
+		iso2_code6=$(curl -6 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
+		if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code6}" ]]; 
+		then
+			echo -e "${GREEN}Your IP supports access to OpenAI.${PLAIN} Region: ${iso2_code6}" 
+		else
+			echo -e "Region: ${iso2_code6}. ${RED}Not support OpenAI at this time.${PLAIN}"
+		fi
+	fi
 fi
 echo 
 echo "Made by Vincent."
