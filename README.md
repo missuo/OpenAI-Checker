@@ -5,10 +5,10 @@ Used to check if your IP can access OpenAI services.
 Our detection results are completely different from Cloudflare's regional judgment of your IP, and the accuracy is irrelevant to this script.
 
 ## Usage
-```
+```shell
 bash <(curl -Ls https://cpp.li/openai)
-
-# or
+```
+```shell
 bash <(curl -Ls https://cdn.jsdelivr.net/gh/missuo/OpenAI-Checker/openai.sh)
 ```
 
