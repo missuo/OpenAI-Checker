@@ -21,13 +21,13 @@ else
 	else
 		echo -e "Region: ${iso2_code4}. ${RED}Not support OpenAI at this time.${PLAIN}"
 	fi
-	echo -e "[IPv6]"
-	if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code6}" ]]; 
-	then
-		echo -e "${GREEN}Your IP supports access to OpenAI.${PLAIN} Region: ${iso2_code6}" 
-	else
-		echo -e "Region: ${iso2_code6}. ${RED}Not support OpenAI at this time.${PLAIN}"
-	fi
+# 	echo -e "[IPv6]"
+# 	if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code6}" ]]; 
+# 	then
+# 		echo -e "${GREEN}Your IP supports access to OpenAI.${PLAIN} Region: ${iso2_code6}" 
+# 	else
+# 		echo -e "Region: ${iso2_code6}. ${RED}Not support OpenAI at this time.${PLAIN}"
+# 	fi
 	
 fi
 echo 
