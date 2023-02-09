@@ -13,7 +13,7 @@ then
 	echo "Your IP is BLOCKED!"
 else
 	iso2_code4=$(curl -4 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
-	iso2_code6=$(curl -6 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
+# 	iso2_code6=$(curl -6 -sS https://chat.openai.com/cdn-cgi/trace | grep "loc=" | awk -F= '{print $2}')
 	echo -e "[IPv4]"
 	if [[ "${SUPPORT_COUNTRY[@]}"  =~ "${iso2_code4}" ]]; 
 	then
