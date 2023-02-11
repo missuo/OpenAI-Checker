@@ -11,6 +11,7 @@ Our detection results come from **Cloudflare** and the accuracy is independent o
 ```shell
 bash <(curl -Ls https://cpp.li/openai)
 ```
+or
 ```shell
 bash <(curl -Ls https://cdn.jsdelivr.net/gh/missuo/OpenAI-Checker/openai.sh)
 ```
