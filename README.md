@@ -5,7 +5,9 @@ Used to check if your IP can access OpenAI services.
 **I have only created this script, and any other websites and programs for OpenAI service availability checking are not my responsibility, so please judge the accuracy by yourself. Theoretically, it is not possible to make accurate judgments through the web side, so it is recommended that you do so through a shell.**
 
 ## Detection method
-Our detection results come from **Cloudflare** and the accuracy is independent of this script.
+Our detection results come from **Cloudflare** and the accuracy is independent of this script.   
+
+At present, there are 161 countries supported, and I will continue to update the countries and regions newly supported by OpenAI.
 
 ## Usage
 ```shell
