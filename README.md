@@ -32,6 +32,8 @@ Your IPv6: 2401:95c0:f001::1 - Vincent Yang
 Your IP supports access to OpenAI. Region: TW
 -------------------------------------
 ```
+## Thanks
+- [Hill-98](https://github.com/Hill-98): Improved the Loc Code that can support access to OpenAI. [#1](https://github.com/missuo/OpenAI-Checker/issues/1)
 
 ## Author
 **OpenAI-Checker** © [Vincent Young](https://github.com/missuo), Released under the [MIT](./LICENSE) License.<br>
