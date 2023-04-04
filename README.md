@@ -7,7 +7,7 @@ Used to check if your IP can access OpenAI services.
 ## Detection method
 Our detection results come from **Cloudflare** and the accuracy is independent of this script.   
 
-At present, there are 161 countries supported, and I will continue to update the countries and regions newly supported by OpenAI.
+At present, there are 163 countries supported, and I will continue to update the countries and regions newly supported by OpenAI. (April 5, 2023)
 
 ## Usage
 ```shell
