@@ -13,7 +13,6 @@ At present, there are 163 countries supported, and I will continue to update the
 ```shell
 bash <(curl -Ls https://cdn.jsdelivr.net/gh/missuo/OpenAI-Checker/openai.sh)
 ```
-or
 **The following short link is temporarily unavailable due to an expired domain. I am in urgent communication with the domain registrar.**
 ```shell
 bash <(curl -Ls https://cpp.li/openai)
