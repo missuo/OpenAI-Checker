@@ -1,8 +1,8 @@
 # OpenAI-Checker
 Used to check if your IP can access OpenAI services.
 
-## Notice
-**With the update of OpenAI's strategy, this script may no longer be accurate. (May 29, 2023)**
+> [!IMPORTANT]  
+> **With the update of OpenAI's strategy, this script may no longer be accurate. (May 29, 2023)**
 
 ## Detection method
 Our detection results come from **Cloudflare** and the accuracy is independent of this script.   
